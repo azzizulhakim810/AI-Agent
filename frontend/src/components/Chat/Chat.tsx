@@ -11,12 +11,12 @@ const Chat = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Hi there",
+      content: "It's Setu Agent AI. Are you thinking about studying abroad?",
     },
-    {
-      role: "user",
-      content: "I'm good",
-    },
+    // {
+    //   role: "user",
+    //   content: "I'm good",
+    // },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
