@@ -17,7 +17,7 @@ const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY as string });
 export async function runAgent(userMessage: string) {
   const response = await ai.models.generateContent({
     model: "gemini-2.5-flash-lite",
-    contents: `User says ${userMessage}. You're an Intelligent AI Agent. Reply relevant answer with the user in a friendly way. `,
+    contents: `${userMessage}`,
     config: {
       thinkingConfig: {
         thinkingBudget: 0, // Disables thinking
@@ -28,6 +28,8 @@ export async function runAgent(userMessage: string) {
   });
   return response.text;
 }
+
+// Stream the output
 // export async function runAgent(userMessage: string) {
 //   const response = await ai.models.generateContentStream({
 //     model: "gemini-2.5-flash-lite",

@@ -13,10 +13,6 @@ const Chat = () => {
       role: "assistant",
       content: "It's Setu Agent AI. Are you thinking about studying abroad?",
     },
-    // {
-    //   role: "user",
-    //   content: "I'm good",
-    // },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
