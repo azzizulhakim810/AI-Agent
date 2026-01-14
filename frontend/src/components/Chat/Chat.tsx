@@ -63,13 +63,25 @@ const Chat = () => {
   };
   return (
     <>
-      <div className="px-2 py-4">
+      <div className="px-4 py-4">
         {messages?.map((message, i) => (
-          <div key={i}>
+          <div className="pb-2" key={i}>
             {/* <Chat_Bubble message={message} //> */}
 
-            <div>
-              <b>{message.role}</b>: {message.content}
+            <div
+              className={`${
+                message.role === "assistant" ? "text-left" : "text-right"
+              } `}
+            >
+              {message.role === "assistant" ? (
+                <div>
+                  <b>{message.role}</b>- {message.content}
+                </div>
+              ) : (
+                <div>
+                  {message.content} -<b>{message.role}</b>
+                </div>
+              )}
             </div>
           </div>
         ))}
