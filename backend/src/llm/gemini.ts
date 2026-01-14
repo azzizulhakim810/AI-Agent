@@ -5,5 +5,9 @@ export const callLLM = async (
   // message: { role: string; content: string }[]
   message: Message[]
 ) => {
+  
+  // TEMP: mock response
+  // Replace with Gemini REST call later
+
   return "LLM response placeholder based on context";
 };
